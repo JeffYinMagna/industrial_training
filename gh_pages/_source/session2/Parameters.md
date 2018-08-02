@@ -53,7 +53,7 @@ So far we haven't used the request field, `base_frame`, for anything. In this ex
    private_node_handle.param<std::string>("base_frame", base_frame, "world"); // parameter name, string object reference, default value
    ```
 
-4. Add a parameter to your `myworkcell_node` "start" function that accepts the base_frame argument, and assign the value from the parameter into the service request. Make sure to update the `app.start` call in your `main()` routine to pass through the `base_frame` value you read from the parameter server:
+4. Add a parameter to your `myworkcell_node` "start" function(inside the ScanNPlan class) that accepts the base_frame argument, and assign the value from the parameter into the service request. Make sure to update the `app.start` call in your `main()` routine to pass through the `base_frame` value you read from the parameter server:
 
    ``` c++
    void start(const std::string& base_frame)
